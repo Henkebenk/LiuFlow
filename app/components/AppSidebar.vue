@@ -11,7 +11,6 @@ import {
 import NavMain from '@/components/NavMain.vue'
 import NavCourses from '@/components/NavCourses.vue'
 import NavUser from '@/components/NavUser.vue'
-import liuLogo from '../assets/liu.svg';
 
 import {
   Sidebar,
