@@ -1,13 +1,8 @@
-<script setup lang="ts">
-import { Divide } from 'lucide-vue-next';
-
-</script>
-
 <template>
   <div class="flex flex-col gap-6 h-full overflow-y-auto scrollbar-hide">
     <div class="flex flex-col sm:flex-row gap-12">
-      <div class="flex flex-col justify-between">
-        <div class="flex flex-col space-between ">
+      <div class="flex flex-col justify-between gap-8">
+        <div class="flex flex-col space-between">
           <h1 class="scroll-m-20 grow text-4xl font-extrabold tracking-tight text-balance">
             God förmiddag Henrik.
           </h1>
