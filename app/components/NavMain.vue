@@ -46,38 +46,41 @@ function openSidebar() {
 
 <template>
   <SidebarGroup>
-    <SidebarGroupLabel>Platform</SidebarGroupLabel>
+    <SidebarGroupLabel>Plattform</SidebarGroupLabel>
     <SidebarMenu>
-      <Collapsible
-        v-for="item in items"
-        :key="item.title"
-        as-child
-        :default-open="item.isActive"
-        class="group/collapsible"
-      >
+      <Collapsible v-for="item in items" :key="item.title" as-child :default-open="item.isActive"
+        class="group/collapsible">
         <SidebarMenuItem>
-          <CollapsibleTrigger as-child>
-            <!-- When pressing the menubutton in collapsed state, open it the sidebar-->
-            <SidebarMenuButton :tooltip="item.title" @click="openSidebar">
+          <SidebarMenuButton v-if="!item.items || item.items.length === 0" as-child>
+            <RouterLink :to="item.url">
               <component :is="item.icon" v-if="item.icon" />
-              <span>{{ item.title }}</span>
-              <ChevronRight class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-            </SidebarMenuButton>
-          </CollapsibleTrigger>
-          <CollapsibleContent>
-            <SidebarMenuSub>
-              <SidebarMenuSubItem v-for="subItem in item.items" :key="subItem.title">
-                <SidebarMenuSubButton as-child>
-                  <RouterLink v-if="!subItem.is_external" :to="subItem.url">
-                    <span>{{ subItem.title }}</span>
-                  </RouterLink>
-                  <a v-else :href="subItem.url" target="_blank">
-                    <span>{{ subItem.title }}</span>
-                  </a>
-                </SidebarMenuSubButton>
-              </SidebarMenuSubItem>
-            </SidebarMenuSub>
-          </CollapsibleContent>
+              <span class="truncate">{{ item.title }}</span>
+            </RouterLink>
+          </SidebarMenuButton>
+          <div v-else>
+            <CollapsibleTrigger as-child>
+              <SidebarMenuButton :tooltip="item.title" @click="openSidebar">
+                <component :is="item.icon" v-if="item.icon" />
+                <span>{{ item.title }}</span>
+                <ChevronRight v-if="item.items && item.items.length > 0"
+                  class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+              </SidebarMenuButton>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <SidebarMenuSub>
+                <SidebarMenuSubItem v-for="subItem in item.items" :key="subItem.title">
+                  <SidebarMenuSubButton as-child>
+                    <RouterLink v-if="!subItem.is_external" :to="subItem.url">
+                      <span>{{ subItem.title }}</span>
+                    </RouterLink>
+                    <a v-else :href="subItem.url" target="_blank">
+                      <span>{{ subItem.title }}</span>
+                    </a>
+                  </SidebarMenuSubButton>
+                </SidebarMenuSubItem>
+              </SidebarMenuSub>
+            </CollapsibleContent>
+          </div>
         </SidebarMenuItem>
       </Collapsible>
     </SidebarMenu>

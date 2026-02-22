@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const selectedCourses = ref<string[]>(["TDP030"])
+const selectedCourses = ref<string[]>([])
 </script>
 
 <template>

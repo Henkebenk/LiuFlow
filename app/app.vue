@@ -28,7 +28,7 @@ useHead({
 
     <AppSidebar />
 
-    <div class="w-full p-3 flex flex-col gap-3 overflow-hidden">
+    <div class="w-full p-4 flex flex-col gap-3 overflow-hidden">
       <div class="flex gap-2 items-center">
         <SidebarTrigger />
         <Separator orientation="vertical" class="mr-2 data-[orientation=vertical]:h-4" />
@@ -49,7 +49,7 @@ useHead({
         </Breadcrumb>
       </div>
 
-      <NuxtPage class="" />
+      <NuxtPage/>
 
     </div>
 

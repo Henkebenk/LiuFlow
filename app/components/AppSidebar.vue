@@ -5,6 +5,8 @@ import {
   Grid2X2,
   HomeIcon,
   Settings2,
+  Toolbox,
+  ToolboxIcon,
 } from "lucide-vue-next"
 import NavMain from '@/components/NavMain.vue'
 import NavCourses from '@/components/NavCourses.vue'
@@ -28,31 +30,41 @@ const data = {
   user: {
     name: "Henrik Hårshagen",
     email: "henha806@student.liu.se",
-    avatar: "https://avatars.githubusercontent.com/u/50397669?v=4&size=64",
+    avatar: "",
   },
   navMain: [
     {
       title: "Hem",
-      url: "#",
+      url: "/",
       icon: HomeIcon,
       isActive: true,
+    },
+    {
+      title: "Tjänster",
+      url: "#",
+      icon: ToolboxIcon,
       items: [
-        {
-          title: "Startsida",
-          url: "/",
-          is_external: false,
-        },
         {
           title: "Schema",
           url: "/schedule",
           is_external: false,
         },
         {
-          title: "Om sidan",
-          url: "/about",
-          is_external: false,
+          title: "Skriva ut",
+          url: "https://print.liu.se/",
+          is_external: true,
         },
-      ],
+        {
+          title: "Karta",
+          url: "https://use.mazemap.com/#v=1&config=liu&zlevel=2&center=15.576769,58.398512&zoom=15.1&campusid=742",
+          is_external: true,
+        },
+        {
+          title: "Boka rum",
+          url: "https://cloud.timeedit.net/liu/web/wr_stud/",
+          is_external: true,
+        }, 
+      ]
     },
     {
       title: "Office 365",

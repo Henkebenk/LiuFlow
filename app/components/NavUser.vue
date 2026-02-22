@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {
+  BadgeCent,
   BadgeCheck,
   Bell,
   ChevronsUpDown,
@@ -85,29 +86,15 @@ const { isMobile } = useSidebar()
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <Sparkles />
-              Upgrade to Pro
+              <BadgeCent />
+              Uppgradera till LiuFlow+
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <BadgeCheck />
-              Account
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <CreditCard />
-              Billing
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Bell />
-              Notifications
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
+          
           <DropdownMenuItem>
             <LogOut />
-            Log out
+            Logga ut
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

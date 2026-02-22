@@ -5,7 +5,7 @@
             <CardHeader>
                 <CardTitle class="flex items-center gap-2">
                     <span>Studenthuset</span>
-                    <Badge variant="default">öppet</Badge>
+                    <Badge variant="outline">öppet</Badge>
                 </CardTitle>
             </CardHeader>
             <CardContent class="flex flex-col gap-4">
@@ -30,7 +30,7 @@
             <CardHeader>
                 <CardTitle class="flex items-center gap-2">
                     <span>C-huset</span>
-                    <Badge variant="default">öppet</Badge>
+                    <Badge variant="outline">öppet</Badge>
                 </CardTitle>
             </CardHeader>
             <CardContent class="flex flex-col gap-4">
