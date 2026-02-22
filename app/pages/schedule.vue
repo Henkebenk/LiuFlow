@@ -4,7 +4,7 @@ const selectedCourses = ref<string[]>([])
 </script>
 
 <template>
-    <div class="flex-col-reverse sm:flex-row gap-4 items-start overflow-hidden">
+    <div class="flex flex-col-reverse sm:flex-row gap-4 items-start overflow-hidden">
         <Schedule :courses="selectedCourses" class="grow"/>
         <Item variant="default" class="w-80 shrink-0">
             <ItemContent>
