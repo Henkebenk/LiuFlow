@@ -17,6 +17,8 @@ useHead({
     { rel: 'icon', href: '/favicon-light.ico', type: 'image/x-icon', media: '(prefers-color-scheme: light)' },
     { rel: 'icon', href: '/favicon-dark.ico', type: 'image/x-icon', media: '(prefers-color-scheme: dark)' },
   ],
+  //link
+  title: 'LiuFlow',
 })
 
 </script>
@@ -39,12 +41,12 @@ useHead({
                 Hem
               </BreadcrumbLink>
             </BreadcrumbItem>
-            <BreadcrumbSeparator />
+            <!-- <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbLink href="/">
                 Schema
               </BreadcrumbLink>
-            </BreadcrumbItem>
+            </BreadcrumbItem> -->
           </BreadcrumbList>
         </Breadcrumb>
       </div>
